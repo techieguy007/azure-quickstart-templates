@@ -11,14 +11,14 @@
   "parameters": {
     "adminUsername": {
       "type": "string",
-      "defaultValue": "vmadmin",
+      "value": "vmadmin",
       "metadata": {
         "description": "Username for the Virtual Machine."
       }
     },
     "adminPassword": {
       "type": "secureString",
-      "defaultValue": "Admin@123456",
+      "value": "Admin@123456",
       "minLength": 12,
       "metadata": {
         "description": "Password for the Virtual Machine."
