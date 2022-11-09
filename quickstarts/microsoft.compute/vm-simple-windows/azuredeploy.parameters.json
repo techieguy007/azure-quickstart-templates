@@ -3,13 +3,34 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "adminUsername": {
-      "value": "GEN-UNIQUE"
+      "value": "vmadmin"
     },
     "adminPassword": {
-      "value": "GEN-PASSWORD"
+      "value": "Admin@123456"
     },
     "dnsLabelPrefix": {
-      "value": "GEN-UNIQUE"
+      "value": "[toLower(format('{0}-{1}', parameters('vmName'), uniqueString(resourceGroup().id, parameters('vmName'))))]"
+    },
+    "publicIpName": {
+      "value": "myPublicIP"
+    },
+    "publicIPAllocationMethod": {
+      "value": "Dynamic"
+    },
+    "publicIpSku": {
+      "value": "Basic"
+    },
+    "OSVersion": {
+      "value": "2022-datacenter-azure-edition-core"
+    },
+    "vmSize": {
+      "value": "Standard_D2s_v5"
+    },
+    "location": {
+      "value": "[resourceGroup().location]"
+    },
+    "vmName": {
+      "value": "simple-vm"
     }
   }
 }
